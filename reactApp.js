@@ -8,7 +8,7 @@ class Team extends React.Component {
     };
 
     this.shotSound = new Audio("./assets/audio/glf+swng.wav");
-    this.scoreSound = new Audio(".assets/audio/glf+swng.wav");
+    this.scoreSound = new Audio("./assets/audio/glf+swng.wav");
   }
 
   shotHandler = () => {
@@ -56,7 +56,6 @@ class Team extends React.Component {
         <div>
           <strong>Score:</strong> {this.state.score}
         </div>
-        <strong>Shooting %: {shotPercentage}</strong>
         <div>
           {shotPercentageDiv}
           <button onClick={this.shotHandler}>Shoot!</button>
@@ -68,11 +67,11 @@ class Team extends React.Component {
 
 function Game(props) {
   return (
-    <div classname="Game">
+    <div className="Game">
       <h1>Welcome to {props.venue}</h1>
-      <div classname="stats"></div>
+      <div className="stats"></div>
       <Team name="Sadboi Club" logo=" ./assets/images/sadboi.jpg" />
-      <div classname="versus"></div>
+      <div className="versus"></div>
       <Team name="illenials" logo=".assets/images/Sound of Walking Away.png" />
     </div>
   );
@@ -92,7 +91,7 @@ function App(props) {
 
   return (
     <div classname="App">
-      <Game venue="Sadboi Club" homeTeam={Sadboi} visitingTeam={Sadboiis} />
+      <Game venue="Sadboi Club" homeTeam={Club} visitingTeam={boiis} />
       <Game venue="Sadboiis" />
     </div>
   );
